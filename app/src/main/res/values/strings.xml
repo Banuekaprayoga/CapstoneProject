@@ -5,4 +5,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_camera">Camera</string>
     <string name="title_profile">Profile</string>
+    <string name="title_application">MYAPPLICATION</string>
+    <string name="title_text">Title</string>
+    <string name="dummy_text">Aglaonema </string>
+    <string name="description_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</string>
 </resources>
