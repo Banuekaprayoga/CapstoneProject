@@ -18,7 +18,6 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/calendar_month/baseline_calendar_month_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,9 +27,6 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_gender_black_24" />
-                            <entry key="sourceFile" value="C:\Users\acer\Downloads\dummyImg\1844227.svg" />
                           </map>
                         </option>
                       </PersistentState>
