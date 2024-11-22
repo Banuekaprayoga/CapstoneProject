@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -51,7 +52,7 @@ class EditProfileActivity : AppCompatActivity() {
             binding.apply {
                 nameEditText.setText(data.name)
                 emailEditText.setText(data.email)
-                genderEditText.setText(data.gender)
+
             }
         }
         binding.btnEditImgProfile.setOnClickListener {
@@ -72,9 +73,9 @@ class EditProfileActivity : AppCompatActivity() {
             val image = currentImageUri.toString()
             val name = binding.nameEditText.text.toString()
             val email = binding.emailEditText.text.toString()
-            val gender = binding.genderEditText.text.toString()
+//            val gender = binding.genderEditText.text.toString()
 //            val birth = binding.bi
-            viewModel.setProfile(name, email, image, gender)
+            viewModel.setProfile(name, email, image)
         }
     }
 

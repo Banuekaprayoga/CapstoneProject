@@ -77,6 +77,7 @@
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/outlined_background"
             android:maxLines="1"
             android:ellipsize="end"
             android:inputType="text"
@@ -112,6 +113,7 @@
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/outlined_background"
             android:maxLines="1"
             android:ellipsize="end"
             android:inputType="textEmailAddress"
@@ -131,8 +133,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
+    <Spinner
+        android:id="@+id/optionsGender"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:entries="@array/gender_options"
+        android:background="@drawable/outlined_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderTextView">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/birthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:text="@string/birth"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsGender" />
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/genderLayout"
+        android:id="@+id/birthEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -140,19 +168,20 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/genderTextView"
-        app:startIconDrawable="@drawable/ic_gender_black_24">
+        app:layout_constraintTop_toBottomOf="@id/birthTextView"
+        app:startIconDrawable="@drawable/ic_calendar_black_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/genderEditText"
+            android:id="@+id/birthEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="text"
+            android:background="@drawable/outlined_background"
             android:maxLines="1"
             android:ellipsize="end"
-            android:ems="10"
-            tools:ignore="LabelFor" />
+            android:inputType="time"
+            android:ems="10" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnSave"
@@ -165,7 +194,7 @@
         android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/birthEditTextLayout" />
 
     <TextView
         android:id="@+id/textView"
