@@ -9,12 +9,12 @@ import com.example.capstone.ui.detail.DetailActivity
 
 class ListPlantAdapter(private val listPlant: ArrayList<Plant>): RecyclerView.Adapter<ListPlantAdapter.ListViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListPlantAdapter.ListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val binding = NutritionRowItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ListViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ListPlantAdapter.ListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val list = listPlant[position]
         holder.bind(list)
         holder.itemView.setOnClickListener {

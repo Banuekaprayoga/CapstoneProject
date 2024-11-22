@@ -1,39 +1,74 @@
 <resources>
     <string name="app_name">LeafWatch</string>
+
+    <!-- Fragment -->
+    <string name="analyze">Analyze</string>
+    <string name="logout">Logout</string>
+    <string name="success_logout">Apakah yakin ingin keluar?</string>
+    <string name="yes_alert">Ya</string>
+    <string name="no_alert">Tidak</string>
+    <string name="dummy_name">Banu Eka Prayoga</string>
+
+    <!-- Activity -->
+    <string name="login">Login</string>
+    <string name="detail">Detail</string>
+    <string name="success_login">Login Berhasil!</string>
+    <string name="next_alert">Next</string>
+    <string name="warning_email_password_wrong">Email atau Password salah</string>
+    <string name="dummy_text">Aglaonema </string>
+    <string name="description_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s,</string>
+    <string name="title_login_page">Sudah siap?</string>
+    <string name="message_login_page">Masukkan dulu datamu ya</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Dont have an account yet?</string>
+    <string name="register">Register Here!</string>
+    <string name="title_welcome_page">Selamat datang di App!</string>
+    <string name="message_welcome_page">Mau cari tau lebih lanjut? Gasss...</string>
+    <string name="signup">Register</string>
+    <string name="edit">Edit</string>
+    <string name="name_view">Nama</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="save">Save</string>
+    <string name="profile">PROFILE</string>
+    <string name="birth">Tanggal Lahir</string>
+    <string name="success_register">Register Success, Please Login!</string>
+    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="login_here">Login Here!</string>
+
+    <!-- Warning String -->
+    <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_camera">Camera</string>
     <string name="title_profile">Profile</string>
-    <string name="profile">PROFILE</string>
-    <string name="title_application">LeafWatch</string>
-    <string name="title_text">Title</string>
-    <string name="dummy_text">Aglaonema </string>
-    <string name="description_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s,</string>
-    <string name="name_view">Nama</string>
-    <string name="tanggal">Tanggal Lahir</string>
-    <string name="jenis">Jenis Kelamin</string>
-    <string name="edit">Edit</string>
-    <string name="register">Register Here!</string>
-    <string name="dont_have_account">Dont have an account yet?</string>
-    <string name="login_here">Login Here!</string>
-    <string name="already_account">Already have an account?</string>
     <string name="dummy_result">Penyakit Bercak Hitam : 99%</string>
-    <string name="analyze">Analyze</string>
-    <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
-
-    <string name="signup">Daftar</string>
-    <string name="login">Masuk</string>
-    <string name="title_welcome_page">Selamat datang di App!</string>
-    <string name="message_welcome_page">Mau cari tau lebih lanjut? Gasss...</string>
-    <string name="title_login_page">Sudah siap?</string>
-    <string name="message_login_page">Masukkan dulu datamu ya</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="name">Nama</string>
-    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
-    <string name="logout">Logout</string>
     <string name="message_main_page">Selamat Belajar di Dicoding.</string>
+    <string name="gallery">Gallery</string>
+    <string name="input_email">Masukkan Email</string>
+
+    <!-- List Adapter -->
+    <string name="title_text">Title</string>
+    <string name="input_password">Masukkan Password</string>
+    <string name="warning_failed_register">Failed Create Account</string>
+
+    <!-- Warning String -->
+    <string name="input_name">Masukkan Nama</string>
+    <string name="success_save">Berhasil Menyimpan</string>
+    <string name="pick_image_alert">Pick Image!</string>
+    <string name="success_pick_image">Success Pick Image</string>
+    <string name="failed_pick_image">No Media Selected</string>
+    <string name="message_pick_image">Pick Image From?</string>
+    <string name="warning_email">Format email tidak valid</string>
+    <string name="warning_password">Password tidak boleh kurang dari 8 karakter</string>
+    
+    <string-array name="gender_options">
+        <item>Jenis Kelamin:</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
 
     <string-array name="data_nama">
         <item>Dummy IMG 1</item>

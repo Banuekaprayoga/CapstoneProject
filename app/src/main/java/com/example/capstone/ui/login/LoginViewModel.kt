@@ -18,6 +18,4 @@ class LoginViewModel(private val repository: UserRepository) : ViewModel() {
             _loginResult.value = success
         }
     }
-
-    val getSession = repository.getSession()
 }

@@ -17,10 +17,20 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
 
     suspend fun saveUser(user: UserModel) {
         dataStore.edit { preferences ->
+            preferences[NAME_KEY] = user.name
             preferences[EMAIL_KEY] = user.email
             preferences[PASSWORD_KEY] = user.password // Simpan password
             preferences[TOKEN_KEY] = user.token
             preferences[IS_LOGIN_KEY] = false // Default false saat register
+        }
+    }
+    suspend fun setProfile(user: UserModel) {
+        dataStore.edit { preferences ->
+            preferences[NAME_KEY] = user.name
+            preferences[EMAIL_KEY] = user.email
+            preferences[PHOTO_URI_KEY] = user.photoUri
+            preferences[GENDER_KEY] = user.gender
+            preferences[BIRTH_KEY] = user.birth
         }
     }
 
@@ -41,8 +51,12 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     fun getSession(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
             UserModel(
+                preferences[NAME_KEY] ?: "",
                 preferences[EMAIL_KEY] ?: "",
                 preferences[PASSWORD_KEY] ?: "",
+                preferences[PHOTO_URI_KEY] ?: "",
+                preferences[GENDER_KEY] ?: "",
+                preferences[BIRTH_KEY] ?: "",
                 preferences[TOKEN_KEY] ?: "",
                 preferences[IS_LOGIN_KEY] ?: false
             )
@@ -58,8 +72,12 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     companion object {
         @Volatile
         private var INSTANCE: UserPreference? = null
+        private val NAME_KEY = stringPreferencesKey("name")
         private val EMAIL_KEY = stringPreferencesKey("email")
         private val PASSWORD_KEY = stringPreferencesKey("password")
+        private val PHOTO_URI_KEY = stringPreferencesKey("photoUri")
+        private val GENDER_KEY = stringPreferencesKey("gender")
+        private val BIRTH_KEY = stringPreferencesKey("birth")
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
 

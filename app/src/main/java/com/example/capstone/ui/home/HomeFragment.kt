@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstone.R
 import com.example.capstone.databinding.FragmentHomeBinding
@@ -53,9 +50,6 @@ class HomeFragment : Fragment() {
         binding.rvPlants.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvPlants.adapter = listPlantAdapter
         binding.rvPlants.setHasFixedSize(true)
-
-//        val itemDecoration = DividerItemDecoration(requireActivity(), DividerItemDecoration.VERTICAL)
-//        binding.rvPlants.addItemDecoration(itemDecoration)
     }
 
     override fun onDestroyView() {

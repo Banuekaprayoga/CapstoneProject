@@ -8,9 +8,14 @@ import kotlinx.coroutines.flow.Flow
 class UserRepository private constructor(
     private val userPreference: UserPreference
 ) {
-    suspend fun registerUser(email: String, password: String) {
-        val user = UserModel(email, password)
+    suspend fun registerUser(name: String, email: String, password: String) {
+        val user = UserModel(name, email, password)
         userPreference.saveUser(user)
+    }
+
+    suspend fun saveProfile(name: String, email: String, photoUri: String, gender: String, birth: String) {
+        val update = UserModel(name, email, photoUri, gender, birth)
+        userPreference.setProfile(update)
     }
 
     suspend fun loginUser(email: String, password: String): Boolean {

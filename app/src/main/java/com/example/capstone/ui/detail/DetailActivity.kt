@@ -26,7 +26,7 @@ class DetailActivity : AppCompatActivity() {
             insets
         }
         val dataPlant = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra<Plant>(EXTRA_DETAIL_DATA, Plant::class.java)
+            intent.getParcelableExtra(EXTRA_DETAIL_DATA, Plant::class.java)
         } else {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra(EXTRA_DETAIL_DATA)
@@ -41,7 +41,7 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.apply {
             setDisplayShowHomeEnabled(true)
             setDisplayHomeAsUpEnabled(true)
-            title = "Detail"
+            title = getString(R.string.detail)
         }
     }
 
